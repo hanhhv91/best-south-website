@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#ededf5",
+                    "inverse-surface": "#2e3036",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#191c21",
+                    "tertiary": "#5f2200",
+                    "industrial-blue-dark": "#003366",
+                    "secondary-fixed-dim": "#b9c7df",
+                    "on-primary-container": "#9bbdff",
+                    "surface-gray": "#F8FAFC",
+                    "inverse-on-surface": "#f0f0f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#004a99",
+                    "surface-container-highest": "#e2e2e9",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "on-tertiary-container": "#ffa77e",
+                    "slate-gray": "#1E293B",
+                    "primary-fixed-dim": "#abc7ff",
+                    "primary-fixed": "#d7e2ff",
+                    "on-tertiary-fixed-variant": "#7b2f00",
+                    "on-surface-variant": "#424751",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e2e2e9",
+                    "surface-bright": "#f9f9ff",
+                    "surface": "#f9f9ff",
+                    "status-precision": "#004A99",
+                    "surface-container-high": "#e7e8ef",
+                    "outline": "#737783",
+                    "secondary": "#515f74",
+                    "tertiary-container": "#833301",
+                    "on-secondary-fixed": "#0d1c2e",
+                    "on-background": "#191c21",
+                    "on-primary-fixed-variant": "#00458f",
+                    "secondary-fixed": "#d5e3fc",
+                    "surface-tint": "#255dad",
+                    "on-error-container": "#93000a",
+                    "border-light": "#E2E8F0",
+                    "on-tertiary-fixed": "#351000",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f3f3fa",
+                    "primary": "#00346f",
+                    "secondary-container": "#d5e3fc",
+                    "outline-variant": "#c2c6d3",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "background": "#f9f9ff",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-primary-fixed": "#001b3f",
+                    "on-secondary-container": "#57657a",
+                    "surface-dim": "#d9d9e1",
+                    "inverse-primary": "#abc7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "section-padding": "80px",
+                    "stack-sm": "8px",
+                    "margin-page": "40px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "data-tabular": ["Inter"],
+                    "h3": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h1": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "data-tabular": ["14px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9ff; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<nav class="max-w-[1280px] mx-auto px-8 flex justify-between items-center h-20">
+<div class="text-xl font-black tracking-tighter text-slate-900 dark:text-white uppercase">Best South Co., Ltd.</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-sans text-sm font-semibold tracking-tight uppercase text-blue-800 dark:text-blue-400 border-b-2 border-blue-800 dark:border-blue-400 pb-1" href="#">Products</a>
+<a class="font-sans text-sm font-semibold tracking-tight uppercase text-slate-600 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200" href="#">Industries</a>
+<a class="font-sans text-sm font-semibold tracking-tight uppercase text-slate-600 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200" href="#">R&amp;D</a>
+<a class="font-sans text-sm font-semibold tracking-tight uppercase text-slate-600 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200" href="#">Certifications</a>
+<a class="font-sans text-sm font-semibold tracking-tight uppercase text-slate-600 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200" href="#">Technical Support</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="bg-surface-container border-none text-xs font-label-caps px-10 py-2 w-48 rounded-none focus:ring-1 focus:ring-primary" placeholder="SEARCH CATALOG" type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 font-label-caps uppercase scale-100 active:scale-95 transition-transform">Request Quote</button>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[640px] flex items-center overflow-hidden bg-inverse-surface">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="Wide shot of a modern automated chemical manufacturing facility with stainless steel piping and industrial lighting in a cold blue tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUh0q1uKrS2Rw8dZQCMgHHId9iOijuOuplIZq8dtpLS-7coCqdgGPvcaRQJZqHJFIiua8M30fNyeJoPNdzqoIpZvaPRCgagjBplHqcPB0I0fm30jcnP2iiP_zBwj8N0kyHnYgx6mkJw-JMMzHgbxyhN-xmXBO9qRapjfufQMsVBtgsjiG_wJ4UCUuIAMdEoUKhtkz7U5xUcPZleIMdBBNipKt7MQVQxrLhjl0iatN0HQa1mJ2azwmfrRENgkFhM4_lK_TurKZjBDDU"/>
+<div class="absolute inset-0 bg-gradient-to-r from-industrial-blue-dark/80 to-transparent"></div>
+<div class="relative max-w-[1280px] mx-auto px-8 w-full">
+<div class="max-w-2xl border-l-4 border-primary-fixed-dim pl-8">
+<span class="text-primary-fixed font-label-caps tracking-[0.2em] mb-4 block">ISO 9001:2015 CERTIFIED</span>
+<h1 class="font-h1 text-h1 text-white mb-6">Engineering-Grade Adhesives for Global Industrial Standards</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8">Precision-formulated polymer solutions for construction, automotive, and assembly. Tested for extreme durability and mechanical stability.</p>
+<div class="flex gap-4">
+<button class="bg-primary-container text-white px-8 py-4 font-label-caps border border-primary hover:bg-primary transition-all">View Technical Solutions</button>
+<button class="bg-transparent text-white px-8 py-4 font-label-caps border border-white/30 hover:border-white transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span> SDS Database
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Product Categories -->
+<section class="py-section-padding bg-white">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="mb-12">
+<h2 class="font-h2 text-h2 text-industrial-blue-dark">Core Product Categories</h2>
+<div class="w-20 h-1 bg-primary mt-4"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Category 1 -->
+<div class="border border-border-light group overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Macro close-up of a clear high-viscosity synthetic resin bead being applied to a metal industrial surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBenfuFy7-NF7muErxyJtoHRtDI_NWU2u7XRC5U7XHAkUYMWSpw-oyLWoLznH79IHqohKli0ChhbAFnYPuGFleU1FVcvRdNGWBcGeN_wMBYQXhT3L6ArPnz0xeiX20pJT-9xwBNVJRiT2QQsaAz_0k9hEQcobhjGlEzYqI8gfrTTkyXTNY2AGewI4RCKlcOYLQawIRLB3_5tyP8zyOrTKc6hEVLRwpFyjCRyIz8HtCnriOYMpMvUbT72ZTVpwEggSrflPysD_2XN4rv"/>
+<div class="absolute top-4 right-4 bg-industrial-blue-dark text-white font-label-caps px-3 py-1">POLY-S SERIES</div>
+</div>
+<div class="p-8">
+<h3 class="font-h3 text-h3 mb-4">Industrial Adhesives</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">High-performance bonding agents designed for structural integrity in high-stress environments.</p>
+<div class="space-y-3 border-t border-border-light pt-6">
+<div class="flex justify-between items-center font-data-tabular">
+<span class="text-outline uppercase">Tensile Strength</span>
+<span class="text-on-surface">&gt; 45 MPa</span>
+</div>
+<div class="flex justify-between items-center font-data-tabular">
+<span class="text-outline uppercase">Cure Time</span>
+<span class="text-on-surface">15-30 Minutes</span>
+</div>
+<div class="flex justify-between items-center font-data-tabular">
+<span class="text-outline uppercase">Temperature Resistance</span>
+<span class="text-on-surface">-40°C to +180°C</span>
+</div>
+</div>
+<button class="mt-8 text-primary font-label-caps flex items-center gap-2 hover:gap-4 transition-all">
+                            SPECIFICATION SHEET <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="border border-border-light group overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Top-down view of blue industrial polymer resin being mixed in a laboratory beaker with precise measurements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlZ_DRo6dR9xoG3gLNtsIh-QfKHbMk-MqLRlkqrXuilLiweTVWPkjC_6a88nzVSLBPi51LijPSL5baE67Jot3XYE-t21SwyyJ_IY_hyDYG8DO1ViAKHIpLg9jYdniZRNjMVGaFmdtPQGKqlkNyFQSuJN6VUWkEn1kdEE2MH4kEQxk24_2PKj874McI2CwR8lJzQ_RaMGvE5HoL3VE52SqWRLekrALPnrs0W2B8PT1FStRG0uHDdFcRZLO3TMRq3_HmmRaOjE7io722"/>
+<div class="absolute top-4 right-4 bg-industrial-blue-dark text-white font-label-caps px-3 py-1">RESIN-X GRADE</div>
+</div>
+<div class="p-8">
+<h3 class="font-h3 text-h3 mb-4">Advanced Resins</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Specialized polymer resins for casting, coating, and composite reinforcement.</p>
+<div class="space-y-3 border-t border-border-light pt-6">
+<div class="flex justify-between items-center font-data-tabular">
+<span class="text-outline uppercase">Viscosity</span>
+<span class="text-on-surface">500 - 12,000 mPa·s</span>
+</div>
+<div class="flex justify-between items-center font-data-tabular">
+<span class="text-outline uppercase">Chemical Resistance</span>
+<span class="text-on-surface">ASTM D543 Level 5</span>
+</div>
+<div class="flex justify-between items-center font-data-tabular">
+<span class="text-outline uppercase">Shore Hardness</span>
+<span class="text-on-surface">85D (Post-Cure)</span>
+</div>
+</div>
+<button class="mt-8 text-primary font-label-caps flex items-center gap-2 hover:gap-4 transition-all">
+                            TECHNICAL TDS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Manufacturing Capability -->
+<section class="bg-surface-gray py-section-padding border-y border-border-light">
+<div class="max-w-[1280px] mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-primary font-label-caps tracking-widest block mb-4">CAPABILITIES</span>
+<h2 class="font-h2 text-h2 mb-6">High-Volume Production &amp; R&amp;D Excellence</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Our state-of-the-art facility spans 45,000 sq. meters, housing high-precision reactors and automated packaging lines to ensure consistent quality at scale.</p>
+<div class="grid grid-cols-2 gap-8">
+<div class="border-l-2 border-primary-fixed-dim pl-4">
+<div class="text-h2 font-h2 text-industrial-blue-dark">25k+</div>
+<div class="font-label-caps text-outline">TONS ANNUAL CAPACITY</div>
+</div>
+<div class="border-l-2 border-primary-fixed-dim pl-4">
+<div class="text-h2 font-h2 text-industrial-blue-dark">12</div>
+<div class="font-label-caps text-outline">GLOBAL R&amp;D LABS</div>
+</div>
+</div>
+<button class="mt-12 bg-white border-2 border-primary text-primary px-8 py-3 font-label-caps hover:bg-primary hover:text-white transition-all">Explore Our Facility</button>
+</div>
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-primary/10"></div>
+<img class="relative z-10 w-full h-auto shadow-xl" data-alt="Interior of a clean-room R&amp;D laboratory with engineers in white coats examining polymer samples under high-tech equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCws9ZsuG3CRAnmIpCUrnkwspUDchl8Scu2yz_o455Wc0GYyfZllROV0ZGcOZrMNOZNQnR66ubz-bXclYjidmyiXkdSq3fy-K3ZyODiQAxdVKQhzkWZgJq0Jf4bvvIyfI49jEcL1yHK3prv2UOs7QHMHPxn9CcrNLxAS0cLtM0ZhQF-gJkrL4kd1m98huAqz32wgNuZZknUZfnaMrGlPa-xUT71ltc-7-6VvzVp6h1UPCWlL4AVzuQw2h9GZmJR9B-gOCCRHeEU3vG4"/>
+<div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-industrial-blue-dark/20 translate-x-4 translate-y-4"></div>
+</div>
+</div>
+</section>
+<!-- Certifications & Quality -->
+<section class="py-section-padding bg-white">
+<div class="max-w-[1280px] mx-auto px-8 text-center">
+<h2 class="font-h2 text-h2 mb-4">Uncompromising Quality Compliance</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mb-16">Every batch undergoes a 14-point technical validation process in our ISO-certified laboratories before shipment.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="p-8 border border-border-light flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps">ISO 9001:2015</span>
+</div>
+<div class="p-8 border border-border-light flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-caps">ASTM TESTED</span>
+</div>
+<div class="p-8 border border-border-light flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-caps">REACH COMPLIANT</span>
+</div>
+<div class="p-8 border border-border-light flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">new_releases</span>
+<span class="font-label-caps">UL CERTIFIED</span>
+</div>
+<div class="p-8 border border-border-light flex flex-col items-center gap-4 col-span-2 md:col-span-1">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">package_2</span>
+<span class="font-label-caps">IATA LOGISTICS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Industries Served -->
+<section class="py-section-padding bg-industrial-blue-dark text-white">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-primary-fixed-dim font-label-caps tracking-[0.2em] mb-4 block">SECTORS</span>
+<h2 class="font-h2 text-h2">Global Industries Served</h2>
+</div>
+<div class="hidden lg:block text-right">
+<p class="font-body-md text-on-primary-container max-w-sm">Tailored chemical formulations for the world's most demanding engineering projects.</p>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-0.5 bg-white/10 border border-white/10">
+<div class="bg-industrial-blue-dark p-10 hover:bg-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-4xl mb-6">precision_manufacturing</span>
+<h3 class="font-h3 text-h3 mb-4">Automotive</h3>
+<p class="font-body-md text-on-primary-container opacity-80">Lightweight bonding for structural chassis components and interior assembly.</p>
+</div>
+<div class="bg-industrial-blue-dark p-10 hover:bg-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-4xl mb-6">apartment</span>
+<h3 class="font-h3 text-h3 mb-4">Construction</h3>
+<p class="font-body-md text-on-primary-container opacity-80">Weather-resistant resins for high-rise glass bonding and infrastructure reinforcement.</p>
+</div>
+<div class="bg-industrial-blue-dark p-10 hover:bg-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-4xl mb-6">conveyor_belt</span>
+<h3 class="font-h3 text-h3 mb-4">Assembly</h3>
+<p class="font-body-md text-on-primary-container opacity-80">High-speed automated adhesive application for electronics and consumer goods.</p>
+</div>
+<div class="bg-industrial-blue-dark p-10 hover:bg-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-4xl mb-6">flight</span>
+<h3 class="font-h3 text-h3 mb-4">Aerospace</h3>
+<p class="font-body-md text-on-primary-container opacity-80">Specialized polymers capable of maintaining bond strength in extreme pressure environments.</p>
+</div>
+<div class="bg-industrial-blue-dark p-10 hover:bg-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-4xl mb-6">energy_program_saving</span>
+<h3 class="font-h3 text-h3 mb-4">Energy</h3>
+<p class="font-body-md text-on-primary-container opacity-80">Composite resins for wind turbine blades and insulation for electrical infrastructure.</p>
+</div>
+<div class="bg-industrial-blue-dark p-10 hover:bg-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-4xl mb-6">biotech</span>
+<h3 class="font-h3 text-h3 mb-4">Medical</h3>
+<p class="font-body-md text-on-primary-container opacity-80">Bio-compatible bonding agents for medical device manufacturing and surgical tools.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-20 bg-white">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="bg-surface-container relative p-12 lg:p-20 overflow-hidden flex flex-col lg:flex-row justify-between items-center gap-12">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+<img class="w-full h-full object-cover" data-alt="Abstract geometrical patterns representing molecular structures of polymer chains in a blue industrial aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_HBJ623hHnOhjMhmK4gyvjt_yovrzU2OCtaNifwh8QTFgWbdGDycGTBLZcHcDKTLdBAyFHNhO3z2sBaifYf58xQz430XENwrIgBeSZUCZPyWSDb6PduSkW-n3cJqMRyFcJ5ieSeBiS7LU1XVe0O1YJPg7eej7R8ZN1ueUOSDfI0MUwfJ-gFcvl2JbZJv18r9owJKp4bc0BmPnqxe69IPDN28wKH2lbRq_PwqD9UtrDEnp_dBjbM7vMqdVe_E_stFmEuj8TcncxVDu"/>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-h2 text-h2 text-industrial-blue-dark mb-6">Partner with Best South for Superior Polymer Performance</h2>
+<p class="font-body-lg text-on-surface-variant">Consult with our engineering team to develop custom adhesive formulations tailored to your specific manufacturing requirements.</p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+<button class="bg-primary text-on-primary px-10 py-5 font-label-caps text-lg shadow-lg hover:shadow-xl transition-all uppercase whitespace-nowrap">Request Technical Quotation</button>
+<button class="bg-white border-2 border-primary text-primary px-10 py-5 font-label-caps text-lg hover:bg-primary hover:text-white transition-all uppercase whitespace-nowrap">Contact Sales</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t-2 border-slate-200 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="max-w-xs">
+<div class="text-lg font-bold text-slate-800 dark:text-slate-200 uppercase mb-4">Best South Co., Ltd.</div>
+<p class="font-sans text-xs font-medium tracking-widest uppercase text-slate-500 dark:text-slate-500 leading-relaxed mb-6">
+                    © 2024 Best South Co., Ltd. Engineering-Grade Precision. Global distribution and technical excellence in polymer science.
+                </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-industrial-blue-dark">RESOURCES</span>
+<a class="font-sans text-xs font-medium tracking-widest uppercase text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">SDS Database</a>
+<a class="font-sans text-xs font-medium tracking-widest uppercase text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">TDS Downloads</a>
+<a class="font-sans text-xs font-medium tracking-widest uppercase text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">ISO 9001 Compliance</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-industrial-blue-dark">OPERATIONS</span>
+<a class="font-sans text-xs font-medium tracking-widest uppercase text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Global Logistics</a>
+<a class="font-sans text-xs font-medium tracking-widest uppercase text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-sans text-xs font-medium tracking-widest uppercase text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors underline underline-offset-4 text-blue-800" href="#">Support</a>
+</div>
+<div class="hidden lg:flex flex-col gap-4">
+<span class="font-label-caps text-industrial-blue-dark">HEADQUARTERS</span>
+<address class="not-italic font-sans text-xs font-medium tracking-widest uppercase text-slate-500 leading-loose">
+                        12 Industrial Plaza, Phase IV<br/>
+                        Manufacturing District<br/>
+                        Republic of Korea
+                    </address>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
